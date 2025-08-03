@@ -1,0 +1,27 @@
+{
+  "crons": [
+    {
+      "path": "/api/notifications/send-daily-reminders",
+      "schedule": "0 9 * * *"
+    },
+    {
+      "path": "/api/notifications/send-weekly-reports",
+      "schedule": "0 10 * * 0"
+    },
+    {
+      "path": "/api/notifications/check-streaks",
+      "schedule": "0 20 * * *"
+    }
+  ],
+  "functions": {
+    "app/api/notifications/send-daily-reminders/route.ts": {
+      "maxDuration": 300
+    },
+    "app/api/notifications/send-weekly-reports/route.ts": {
+      "maxDuration": 300
+    },
+    "app/api/notifications/check-streaks/route.ts": {
+      "maxDuration": 300
+    }
+  }
+}
